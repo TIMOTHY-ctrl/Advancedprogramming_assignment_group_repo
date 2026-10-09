@@ -1,4 +1,3 @@
-"""Independent scan-based adapter used to check repository substitutability."""
 from copy import deepcopy
 from datetime import datetime
 from src.Domain.Aggregate.TripAggregate.trip import Trip

@@ -2,6 +2,11 @@
 
 Python 3.10+; standard library only. Run commands from the repository root.
 
+For direct file execution in VS Code, install the project once in the active
+virtual environment with `python -m pip install -e .`. This uses setuptools
+during installation; the application itself has no third-party runtime dependencies.
+Repeat the installation if you recreate the virtual environment or move the project.
+
 ```powershell
 python -B -m unittest discover -s test -v
 python -B -m src.main
