@@ -1,0 +1,2 @@
+# Saved patch evidence contains significant single-space context lines.
+evidence/*.diff -whitespace
