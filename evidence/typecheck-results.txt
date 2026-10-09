@@ -1,0 +1,4 @@
+$ C:\Users\TIMO\Desktop\advancedprogramminggrouprepo\Advancedprogramming_assignment_group_repo\.venv\Scripts\python.exe -m mypy --follow-imports=normal --check-untyped-defs --explicit-package-bases src
+Success: no issues found in 28 source files
+
+Exit code: 0

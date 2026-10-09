@@ -2,7 +2,7 @@ from datetime import datetime
 from typing import Protocol
 
 from src.Domain.Aggregate.TripAggregate.trip import Trip
-from src.Domain.Aggregate.TripAdvatAggregate.TripAdvertisement import TripAdvertisement
+from src.Domain.Aggregate.TripAdvertisementAggregate.TripAdvertisement import TripAdvertisement
 from src.Domain.Entities.bus import Bus
 from src.application.DTOs.BookSeatInputDTO import BookSeatInputDTO
 from src.application.DTOs.BookSeatOutputDTO import BookSeatOutputDTO

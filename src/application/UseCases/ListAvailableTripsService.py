@@ -1,4 +1,4 @@
-from src.Domain.Aggregate.TripAdvatAggregate.TripAdvertisement import TripAdvertisement
+from src.Domain.Aggregate.TripAdvertisementAggregate.TripAdvertisement import TripAdvertisement
 from src.application.Repositories.ITripAdvertisementRepository import (
     ITripAdvertisementRepository,
 )

@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+from src.application.DTOs.AdvertisementOutcome import AdvertisementOutcome
 
 
 @dataclass(frozen=True)
@@ -8,4 +9,4 @@ class BookSeatOutputDTO:
     passenger_name: str
     seat_number: int
     available_seats: int
-    advertisement_outcome: str
+    advertisement_outcome: AdvertisementOutcome

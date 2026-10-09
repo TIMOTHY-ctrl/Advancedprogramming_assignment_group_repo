@@ -6,3 +6,4 @@ interface -> Domain
 interface -> application
 Composition root: src/main.py imports all four layers.
 No forbidden cross-layer imports found.
+Application collaborators depend on workflow protocols; the controller depends on ConsolePresenter.

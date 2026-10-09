@@ -1,0 +1,18 @@
+$ C:\Users\TIMO\Desktop\advancedprogramminggrouprepo\Advancedprogramming_assignment_group_repo\.venv\Scripts\python.exe -B -m unittest discover -s test -k T2 -v
+test_T2_BR2_booking_changes_identified_trip_state (test_architecture.BookingArchitectureTests.test_T2_BR2_booking_changes_identified_trip_state) ... FAIL
+
+======================================================================
+FAIL: test_T2_BR2_booking_changes_identified_trip_state (test_architecture.BookingArchitectureTests.test_T2_BR2_booking_changes_identified_trip_state)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TIMO\Desktop\advancedprogramminggrouprepo\Advancedprogramming_assignment_group_repo\test\test_architecture.py", line 39, in test_T2_BR2_booking_changes_identified_trip_state
+    self.assertEqual(self.trips.find_by_number('TR001').available_seats, 1)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0 != 1
+
+----------------------------------------------------------------------
+Ran 1 test in 0.002s
+
+FAILED (failures=1)
+
+Exit code: 1

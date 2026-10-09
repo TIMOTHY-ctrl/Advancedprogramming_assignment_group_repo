@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from src.Domain.Aggregate.TripAdvatAggregate.TripAdvertisement import TripAdvertisement
+from src.Domain.Aggregate.TripAdvertisementAggregate.TripAdvertisement import TripAdvertisement
 
 
 class ITripAdvertisementRepository(ABC):

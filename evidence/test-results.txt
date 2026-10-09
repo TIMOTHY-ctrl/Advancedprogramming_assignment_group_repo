@@ -1,4 +1,4 @@
-$ python -B -m unittest discover -s test -v
+$ C:\Users\TIMO\Desktop\advancedprogramminggrouprepo\Advancedprogramming_assignment_group_repo\.venv\Scripts\python.exe -B -m unittest discover -s test -v
 test_T1_BR1_positive_integer_seat_value (test_architecture.BookingArchitectureTests.test_T1_BR1_positive_integer_seat_value) ... ok
 test_T2_BR2_booking_changes_identified_trip_state (test_architecture.BookingArchitectureTests.test_T2_BR2_booking_changes_identified_trip_state) ... ok
 test_T3_BR3_unique_seats_and_capacity_boundary (test_architecture.BookingArchitectureTests.test_T3_BR3_unique_seats_and_capacity_boundary) ... ok
@@ -9,7 +9,7 @@ test_T7_main_use_case_handles_event_and_changes_aggregate_B (test_architecture.B
 test_T8_aggregate_B_rejects_repeated_follow_up (test_architecture.BookingArchitectureTests.test_T8_aggregate_B_rejects_repeated_follow_up) ... ok
 
 ----------------------------------------------------------------------
-Ran 8 tests in 0.001s
+Ran 8 tests in 0.015s
 
 OK
 

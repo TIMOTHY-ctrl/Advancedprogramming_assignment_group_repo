@@ -12,7 +12,7 @@ from src.Domain.Events.TripFullyBooked import TripFullyBooked
 from src.Domain.ValueObject.seatnumber import SeatNumber
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, eq=False)
 class Trip:
     trip_number: str
     departure_time: datetime
@@ -20,10 +20,12 @@ class Trip:
     _booked_seats: dict[int, Booking] = field(default_factory=dict, init=False, repr=False)
 
     def __post_init__(self) -> None:
-        if not self.trip_number.strip():
+        if not isinstance(self.trip_number, str) or not self.trip_number.strip():
             raise ValueError("Trip number cannot be empty")
         if not isinstance(self.departure_time, datetime):
             raise ValueError("Departure time must be a datetime")
+        if self.departure_time.utcoffset() is not None:
+            raise ValueError('Departure time must be a local datetime without timezone')
         if not isinstance(self.bus, Bus):
             raise ValueError("Trip must be assigned a bus")
 
@@ -48,6 +50,8 @@ class Trip:
         passenger_name: str,
         seat_number: SeatNumber,
     ) -> tuple[Booking, TripFullyBooked | None]:
+        if not isinstance(seat_number, SeatNumber):
+            raise ValueError('Seat number must be a SeatNumber value')
         if seat_number.value > self.capacity:
             raise ValueError(
                 f"Seat number must be between 1 and {self.capacity}"
@@ -72,3 +76,11 @@ class Trip:
             else None
         )
         return booking, event
+
+    def __eq__(self, other: object) -> bool:
+        if not isinstance(other, Trip) or type(other) is not type(self):
+            return NotImplemented
+        return self.trip_number == other.trip_number
+
+    def __hash__(self) -> int:
+        return hash((type(self), self.trip_number))

@@ -33,28 +33,28 @@ Actual output:
 4. Schedule a trip
 5. Exit
 Select an option: Trips with available seats:
-TR001: 2026-10-09 16:46, 3 seats available
+TR001: 2026-10-09 17:54, 3 seats available
 
 1. Show trips with available seats
 2. Book a seat
 3. Retrieve a trip
 4. Schedule a trip
 5. Exit
-Select an option: Enter trip number: Enter passenger name: Enter seat number: Booking successful. Booking ID: e3759e6eaaed48aa95f3cdb4aa1cd99f. Advertisement: advertised
+Select an option: Enter trip number: Enter passenger name: Enter seat number: Booking successful. Booking ID: 47f7a81a9e164d3398e63dc99b1f2eb7. Advertisement: advertised
 
 1. Show trips with available seats
 2. Book a seat
 3. Retrieve a trip
 4. Schedule a trip
 5. Exit
-Select an option: Enter trip number: Enter passenger name: Enter seat number: Booking successful. Booking ID: a031f47aa44b4045b4e09599474555df. Advertisement: advertised
+Select an option: Enter trip number: Enter passenger name: Enter seat number: Booking successful. Booking ID: dfff864a6936404fa65b89f75d9456bf. Advertisement: advertised
 
 1. Show trips with available seats
 2. Book a seat
 3. Retrieve a trip
 4. Schedule a trip
 5. Exit
-Select an option: Enter trip number: Enter passenger name: Enter seat number: Booking successful. Booking ID: 3777aa58a3074ec2945738dd4c745da7. Advertisement: withdrawn
+Select an option: Enter trip number: Enter passenger name: Enter seat number: Booking successful. Booking ID: 94f025e32d734e70a41d457106217d7d. Advertisement: withdrawn
 
 1. Show trips with available seats
 2. Book a seat
@@ -68,7 +68,7 @@ Select an option: No trips have available seats.
 3. Retrieve a trip
 4. Schedule a trip
 5. Exit
-Select an option: Enter trip number: Trip TR001: departure 2026-10-09 16:46, bus BUS001, 0/3 seats available
+Select an option: Enter trip number: Trip TR001: departure 2026-10-09 17:54, bus BUS001, 0/3 seats available
 
 1. Show trips with available seats
 2. Book a seat

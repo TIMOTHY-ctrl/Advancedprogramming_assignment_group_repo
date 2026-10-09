@@ -1,4 +1,6 @@
 from datetime import datetime
+from src.Infrastructure.InMemoryStore import InMemoryStore
+from src.Infrastructure.InMemoryUnitOfWork import InMemoryUnitOfWork
 from src.Domain.Services.BusSchedulingPolicy import BusSchedulingPolicy
 
 from src.Domain.Entities.bus import Bus
@@ -19,21 +21,24 @@ from src.application.UseCases.UpdateAdvertisementService import (
     UpdateAdvertisementService,
 )
 from src.interface.ConsoleApp import ConsoleApp
+from src.interface.ConsoleView import ConsoleView
 
 
 def build_console_app() -> ConsoleApp:
-    trip_repository = InMemoryTripRepository()
-    advertisement_repository = InMemoryTripAdvertisementRepository()
+    store = InMemoryStore()
+    unit_of_work = InMemoryUnitOfWork(store)
+    trip_repository = InMemoryTripRepository(store)
+    advertisement_repository = InMemoryTripAdvertisementRepository(store)
 
-    fully_booked_handler = TripFullyBookedHandler(advertisement_repository)
+    fully_booked_handler = TripFullyBookedHandler(advertisement_repository, unit_of_work)
     advertisement_service = UpdateAdvertisementService(
-        advertisement_repository, fully_booked_handler
+        advertisement_repository, fully_booked_handler, unit_of_work
     )
     create_trip_service = CreateTripService(
-        trip_repository, advertisement_service, BusSchedulingPolicy()
+        trip_repository, advertisement_service, BusSchedulingPolicy(), unit_of_work
     )
     book_seat_service = BookSeatService(
-        trip_repository, advertisement_service
+        trip_repository, advertisement_service, unit_of_work
     )
     get_trip_service = GetTripService(trip_repository)
     list_available_trips_service = ListAvailableTripsService(
@@ -51,6 +56,7 @@ def build_console_app() -> ConsoleApp:
         create_trip_service=create_trip_service,
         get_trip_service=get_trip_service,
         list_available_trips_service=list_available_trips_service,
+        view=ConsoleView(),
     )
 
 
