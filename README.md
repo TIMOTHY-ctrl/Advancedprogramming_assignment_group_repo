@@ -9,11 +9,8 @@ python -B -m src.main
 
 ## Submission files
 
-The latest revision is `presentation/coursework-slides-revised.pptx`, with matching `.pdf` and `.html` files. Use these revised files for submission.
+The presentation folder was removed at the group's request. The coursework still requires a 15-slide deck, which must be supplied separately.
 
-- `presentation/coursework-slides-revised.pptx`: exactly 15 slides, editable in PowerPoint.
-- `presentation/coursework-slides-revised.pdf`: PowerPoint-exported copy for submission or printing.
-- `presentation/coursework-slides-revised.html`: the same slides for a browser; arrow keys navigate and printing produces 15 pages.
 - `test/test_architecture.py`: exactly eight tests, identified T1-T8.
 - `evidence/test-results.txt`: actual full test output.
 - `evidence/tdd-red.txt`, `evidence/tdd-green.txt`: actual failing and passing runs of T4.
@@ -24,15 +21,15 @@ The latest revision is `presentation/coursework-slides-revised.pptx`, with match
 - `evidence/console-smoke.txt`, `evidence/architecture-dependencies.txt`: console walkthrough and inspected import dependencies.
 - `src/`: final implementation with in-memory persistence.
 
-Slide 1 lists the four confirmed members and their student numbers. ATUHAIRE MARY SEANICE is Domain Lead; kisakye rita is Domain Model Lead; Nassaka Catherine is Architecture Lead; Mwizerwa Timothy covers Testing and Integration. The coursework specifies five members; confirm the four-member arrangement with the instructor or add the fifth member when confirmed.
+The four confirmed members are ATUHAIRE MARY SEANICE (Domain Lead), kisakye rita (Domain Model Lead), Nassaka Catherine (Architecture Lead), and Mwizerwa Timothy (Testing and Integration). The coursework specifies five members; confirm the four-member arrangement with the instructor or add the fifth member when confirmed.
 
-The slide-generation tools were removed from the final submission. Edit the delivered PowerPoint directly; after editing, export a matching PDF from PowerPoint. The application and tests require no third-party packages.
+The slide-generation tools were also removed. The application and tests require no third-party packages.
 
 AI disclosure: OpenAI Codex helped review the rubric, revise the domain model and implementation, write tests, capture TDD evidence, and prepare slides. Every member must review and be able to explain the submitted work.
 
 ## Six rules and scope
 
-The authoritative BR1-BR6 statements, responsible components, and violation outcomes are on Slide 3; Slide 15 maps them to code and tests. Booking a seat and withdrawing its advertisement are the two event-connected use cases. Scheduling, lookup, and listing are small supporting operations.
+The separately supplied deck must state BR1-BR6, responsible components, and violation outcomes on Slide 3, and map rules to code and tests on Slide 15. Booking a seat and withdrawing its advertisement are the two event-connected use cases. Scheduling, lookup, and listing are small supporting operations.
 
 The scheduling policy prevents equal departure instants for the same bus; journey duration and overlapping journeys are outside scope. All times supplied by the console are local, timezone-naive values. Persistence lasts for one process only.
 
