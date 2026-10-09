@@ -1,0 +1,8 @@
+Actual cross-layer imports (source -> dependency):
+Infrastructure -> Domain
+Infrastructure -> application
+application -> Domain
+interface -> Domain
+interface -> application
+Composition root: src/main.py imports all four layers.
+No forbidden cross-layer imports found.

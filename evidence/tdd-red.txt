@@ -1,0 +1,18 @@
+$ python -B -m unittest discover -s test -k T4 -v
+test_T4_BR4_bus_cannot_depart_on_two_trips_at_same_time (test_architecture.BookingArchitectureTests.test_T4_BR4_bus_cannot_depart_on_two_trips_at_same_time) ... FAIL
+
+======================================================================
+FAIL: test_T4_BR4_bus_cannot_depart_on_two_trips_at_same_time (test_architecture.BookingArchitectureTests.test_T4_BR4_bus_cannot_depart_on_two_trips_at_same_time)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\TIMO\Desktop\advancedprogramminggrouprepo\Advancedprogramming_assignment_group_repo\test\test_architecture.py", line 47, in test_T4_BR4_bus_cannot_depart_on_two_trips_at_same_time
+    with self.assertRaisesRegex(ValueError, 'already scheduled'):
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 1 test in 0.002s
+
+FAILED (failures=1)
+
+Exit code: 1

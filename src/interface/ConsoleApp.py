@@ -81,7 +81,8 @@ class ConsoleApp:
             return
 
         self._output(
-            f"Booking successful. Booking ID: {result.booking_id}"
+            f"Booking successful. Booking ID: {result.booking_id}. "
+            f"Advertisement: {result.advertisement_outcome}"
         )
 
     def _retrieve_trip(self) -> None:

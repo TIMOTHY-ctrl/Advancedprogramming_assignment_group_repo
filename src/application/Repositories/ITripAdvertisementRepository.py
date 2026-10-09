@@ -1,5 +1,4 @@
 from abc import ABC, abstractmethod
-
 from src.Domain.Aggregate.TripAdvatAggregate.TripAdvertisement import TripAdvertisement
 
 
@@ -9,7 +8,7 @@ class ITripAdvertisementRepository(ABC):
         raise NotImplementedError
 
     @abstractmethod
-    def remove(self, trip_number: str) -> None:
+    def find_by_number(self, trip_number: str) -> TripAdvertisement | None:
         raise NotImplementedError
 
     @abstractmethod

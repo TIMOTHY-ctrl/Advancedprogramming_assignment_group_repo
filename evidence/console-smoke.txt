@@ -1,0 +1,93 @@
+$ python -B -m src.main
+Scripted input:
+1
+2
+TR001
+Alex
+1
+2
+TR001
+Sam
+2
+2
+TR001
+Jo
+3
+1
+3
+TR001
+4
+TR002
+BUS002
+4
+2026-10-10 09:30
+3
+TR002
+5
+
+Actual output:
+
+1. Show trips with available seats
+2. Book a seat
+3. Retrieve a trip
+4. Schedule a trip
+5. Exit
+Select an option: Trips with available seats:
+TR001: 2026-10-09 16:46, 3 seats available
+
+1. Show trips with available seats
+2. Book a seat
+3. Retrieve a trip
+4. Schedule a trip
+5. Exit
+Select an option: Enter trip number: Enter passenger name: Enter seat number: Booking successful. Booking ID: e3759e6eaaed48aa95f3cdb4aa1cd99f. Advertisement: advertised
+
+1. Show trips with available seats
+2. Book a seat
+3. Retrieve a trip
+4. Schedule a trip
+5. Exit
+Select an option: Enter trip number: Enter passenger name: Enter seat number: Booking successful. Booking ID: a031f47aa44b4045b4e09599474555df. Advertisement: advertised
+
+1. Show trips with available seats
+2. Book a seat
+3. Retrieve a trip
+4. Schedule a trip
+5. Exit
+Select an option: Enter trip number: Enter passenger name: Enter seat number: Booking successful. Booking ID: 3777aa58a3074ec2945738dd4c745da7. Advertisement: withdrawn
+
+1. Show trips with available seats
+2. Book a seat
+3. Retrieve a trip
+4. Schedule a trip
+5. Exit
+Select an option: No trips have available seats.
+
+1. Show trips with available seats
+2. Book a seat
+3. Retrieve a trip
+4. Schedule a trip
+5. Exit
+Select an option: Enter trip number: Trip TR001: departure 2026-10-09 16:46, bus BUS001, 0/3 seats available
+
+1. Show trips with available seats
+2. Book a seat
+3. Retrieve a trip
+4. Schedule a trip
+5. Exit
+Select an option: Enter trip number: Enter bus number: Enter bus capacity: Enter departure date and time (YYYY-MM-DD HH:MM): Trip TR002 scheduled successfully.
+
+1. Show trips with available seats
+2. Book a seat
+3. Retrieve a trip
+4. Schedule a trip
+5. Exit
+Select an option: Enter trip number: Trip TR002: departure 2026-10-10 09:30, bus BUS002, 4/4 seats available
+
+1. Show trips with available seats
+2. Book a seat
+3. Retrieve a trip
+4. Schedule a trip
+5. Exit
+Select an option: 
+Exit code: 0

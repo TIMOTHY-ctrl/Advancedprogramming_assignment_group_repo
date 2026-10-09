@@ -1,4 +1,5 @@
 from datetime import datetime
+from src.Domain.Services.BusSchedulingPolicy import BusSchedulingPolicy
 
 from src.Domain.Entities.bus import Bus
 from src.Infrastructure.InMemoryTripAdvertisementRepository import (
@@ -29,7 +30,7 @@ def build_console_app() -> ConsoleApp:
         advertisement_repository, fully_booked_handler
     )
     create_trip_service = CreateTripService(
-        trip_repository, advertisement_service
+        trip_repository, advertisement_service, BusSchedulingPolicy()
     )
     book_seat_service = BookSeatService(
         trip_repository, advertisement_service

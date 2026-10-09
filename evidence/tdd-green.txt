@@ -1,0 +1,9 @@
+$ python -B -m unittest discover -s test -k T4 -v
+test_T4_BR4_bus_cannot_depart_on_two_trips_at_same_time (test_architecture.BookingArchitectureTests.test_T4_BR4_bus_cannot_depart_on_two_trips_at_same_time) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+OK
+
+Exit code: 0

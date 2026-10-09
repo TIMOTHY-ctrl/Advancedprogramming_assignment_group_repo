@@ -1,6 +1,6 @@
 from dataclasses import dataclass
 
-from src.Domain.ValueObject.setnumber import SeatNumber
+from src.Domain.ValueObject.seatnumber import SeatNumber
 
 
 @dataclass(frozen=True)

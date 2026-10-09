@@ -8,3 +8,4 @@ class BookSeatOutputDTO:
     passenger_name: str
     seat_number: int
     available_seats: int
+    advertisement_outcome: str

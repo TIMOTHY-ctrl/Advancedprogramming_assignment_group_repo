@@ -1,7 +1,5 @@
 from src.Domain.Aggregate.TripAdvatAggregate.TripAdvertisement import TripAdvertisement
-from src.application.Repositories.ITripAdvertisementRepository import (
-    ITripAdvertisementRepository,
-)
+from src.application.Repositories.ITripAdvertisementRepository import ITripAdvertisementRepository
 
 
 class InMemoryTripAdvertisementRepository(ITripAdvertisementRepository):
@@ -11,8 +9,8 @@ class InMemoryTripAdvertisementRepository(ITripAdvertisementRepository):
     def put(self, advertisement: TripAdvertisement) -> None:
         self._advertisements[advertisement.trip_number] = advertisement
 
-    def remove(self, trip_number: str) -> None:
-        self._advertisements.pop(trip_number, None)
+    def find_by_number(self, trip_number: str) -> TripAdvertisement | None:
+        return self._advertisements.get(trip_number)
 
     def list_available(self) -> list[TripAdvertisement]:
-        return list(self._advertisements.values())
+        return [ad for ad in self._advertisements.values() if ad.active]
